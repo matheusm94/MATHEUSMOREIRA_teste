@@ -1,28 +1,23 @@
 CREATE TABLE passageiro
 (
+cpf VARCHAR (20) NOT NULL PRIMARY KEY,
 nome VARCHAR(40)NOT NULL,
-cpf VARCHAR (20) NOT NULL,
-nascimento VARCHAR(20)NOT NULL,
+nascimento DATE NOT NULL,
 sexo VARCHAR(10)NOT NULL
 
 );
 
 
-ALTER TABLE passageiro
-ADD PRIMARY KEY (nome)
-
 CREATE TABLE motorista
 (
+cpf VARCHAR (10) NOT NULL PRIMARY KEY,  
 nome VARCHAR(40)NOT NULL,
-cpf VARCHAR (10) NOT NULL,
-nascimento VARCHAR(20)NOT NULL,
+nascimento DATE NOT NULL,
 sexo VARCHAR(10)NOT NULL,
-modeloCarro(10)NOT NULL,  
-statusMotorista(10) NOT NULL
+modeloCarro VARCHAR(10)NOT NULL,  
+statusMotorista VARCHAR(10) NOT NULL
 );
 
-ALTER TABLE motorista
-ADD PRIMARY KEY (cpf)
 
 CREATE TABLE corrida
 (
